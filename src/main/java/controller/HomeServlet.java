@@ -1,4 +1,4 @@
-package servlet;
+package controller;
 
 import java.io.IOException;
 
@@ -11,17 +11,12 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(
         name = "MyServlet", 
-        urlPatterns = {"/hello"}
+        urlPatterns = {"/home"}
     )
-public class HelloServlet extends HttpServlet {
-
+public class HomeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        ServletOutputStream out = resp.getOutputStream();
-        out.write("hello heroku".getBytes());
-        out.flush();
-        out.close();
-    }
-    
+    	req.getRequestDispatcher("/WEB-INF/jsp/home.jsp").forward(req, resp);
+    }    
 }

@@ -2,12 +2,12 @@
 <!doctype html>
 <html>
 <head>
-    <title>Bookstore Category Page</title>
+    <title>My Bookstore</title>
     <meta charset="utf-8">
-    <meta name="description" content="The category page for a bookstore">
+    <meta name="description" content="The homepage for My Bookstore">
 
     <!--
-        normalize-and-reset.css.css is a basic CSS reset; useful for starting from ground zero.
+        normalize-and-reset.css is a basic CSS reset; useful for starting from ground zero.
         always include this first.
     -->
 
@@ -26,28 +26,17 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/category.css">
+    <link rel="stylesheet" href="css/homepage.css">
 
 </head>
 
 <body>
 <main>
-    <jsp:include page="WEB-INF/jsp/header.jsp"/>
+    <jsp:include page="header.jsp"/>
     <section>
-        This is the category page.
-        <nav>
-            These are the navigation buttons.
-        </nav>
-        <article>
-            These are the books.
-            <div id="book">
-                <a href="category.jsp">
-                    <img src="${initParam.bookImages}the-hobbit.gif" alt="The Hobbit"/>
-                </a>
-            </div>
-        </article>
+        This is the homepage.
     </section>
-    <jsp:include page="WEB-INF/jsp/footer.jsp"/>
+    <jsp:include page="footer.jsp"/>
 </main>
 </body>
 </html>
